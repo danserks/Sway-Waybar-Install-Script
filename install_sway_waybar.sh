@@ -42,6 +42,7 @@ yay -S network-manager-applet blueman pavucontrol sway swaybg swayidle swaylock 
        mythes-en aurutils sddm sddm-sugar-candy-git plymouth
 
 sleep 2
+clear
 echo "Which drivers would you like to install?"
 echo "1. AMD"
 echo "2. Nvidia"
