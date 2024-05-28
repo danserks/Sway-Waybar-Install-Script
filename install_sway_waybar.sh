@@ -42,6 +42,27 @@ yay -S network-manager-applet blueman pavucontrol sway swaybg swayidle swaylock 
        mythes-en aurutils sddm sddm-sugar-candy-git plymouth
 
 sleep 2
+echo "Which drivers would you like to install?"
+echo "1. AMD"
+echo "2. Nvidia"
+
+read -p "Enter your choice (1 or 2): " choice
+
+case $choice in
+    1)
+        echo "Installing all AMD drivers..."
+        yay -S amdgpu-pro-libgl lib32-amdgpu-pro-libgl amdgpu xf86-video-amdgpu mesa
+        echo "Finished installing AMD drivers."
+        ;;
+    2)
+        echo "Installing all Nvidia drivers..."
+        yay -S nvidia nvidia-utils lib32-nvidia-utils
+        echo "Finished installing Nvidia drivers."
+        ;;
+    *)
+        echo "Invalid choice. Please enter 1 or 2."
+        ;;
+esac
 
 clear
 echo "Applying configuration..."
